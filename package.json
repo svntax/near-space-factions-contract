@@ -1,0 +1,20 @@
+{
+  "name": "spacefactionscontract",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "./build.sh",
+    "deploy": "./deploy.sh",
+    "test": "npm run deploy && npm run test:integration",
+    "test:integration": "cd integration-tests && npm test -- -- \"../build/contract.wasm\""
+  },
+  "author": "svntax",
+  "license": "(MIT AND Apache-2.0)",
+  "dependencies": {
+    "near-sdk-js": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.4",
+    "ts-morph": "^16.0.0"
+  }
+}
